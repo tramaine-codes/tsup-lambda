@@ -1,10 +1,11 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
+  clean: true,
   entry: ['src/lambda.ts'],
   external: ['oracledb'],
-  watch: false,
-  splitting: false,
   sourcemap: true,
-  clean: true,
+  splitting: true,
+  treeshake: true,
+  watch: false,
 });
